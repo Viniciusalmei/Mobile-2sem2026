@@ -1,3 +1,4 @@
+import 'package:aula1_test/navigation/navbar.dart';
 import 'package:aula1_test/pages/telacolumn.dart';
 import 'package:aula1_test/pages/telamix.dart';
 import 'package:aula1_test/pages/telarow.dart';
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(//Fornece os componentes para as telas & faz a configuração geral do app 
     initialRoute: "/", 
     routes: {
-      "/": (context)=> TelaColumn(),
+      "/": (context)=> NavBar(),
+      "/column":(context)=> TelaColumn(),
       "/row":(context) => TelaRow(),
       "/stack":(context) => TelaStack(),
       "/mix":(context) => TelaMix()
