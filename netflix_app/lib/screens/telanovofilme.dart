@@ -22,7 +22,7 @@ class _TelaNovoFilmeState extends State<TelaNovoFilme> {
     List<String> lista = banco.getStringList("filmes") ?? [];
     lista.add(filme);
     await banco.setStringList("filmes", lista);
-    Navigator.pop(context); //Volta na tela anterior
+    Navigator.pushNamed(context,"/home"); //Volta na tela anterior
   }
 
   @override
