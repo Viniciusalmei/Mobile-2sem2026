@@ -57,6 +57,16 @@ class _TelaHomeState extends State<TelaHome> {
             Text(filme.split("|")[0]),
             BotaoNavegar(funcao: ()=> deletarFilmes(filme),textobotao: "Deletar",)
           ],)
+          // ListView.builder(itemBuilder: (context, index) {
+          // dynamic filme = mostrarFilmes[index];
+          // return Column(children: [
+          //   GestureDetector(onTap: ()=>Navigator.push(context,MaterialPageRoute(builder:(context) => TelaDetalhes(filme: filme))),
+          //   child:Image.network(filme.split("|")[3], width: 100,),
+          //   ),
+          //   Text(filme.split("|")[0]),
+          //   BotaoNavegar(funcao: ()=> deletarFilmes(filme),textobotao: "Deletar",)
+          // ],);
+          // }, itemCount: mostrarFilmes.length,)
         ],
       )
     );
