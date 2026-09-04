@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_app/components/botaonavegar.dart';
 import 'package:netflix_app/components/minhaappbar.dart';
+import 'package:netflix_app/screens/teladetalhes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class TelaHome extends StatefulWidget {
@@ -28,6 +30,16 @@ class _TelaHomeState extends State<TelaHome> {
   });
   }
 
+  void deletarFilmes(String filme) async {
+    SharedPreferences banco = await SharedPreferences.getInstance();
+    List<String> filmesBanco = banco.getStringList("filmes") ?? [];
+    filmesBanco.remove(filme);
+    await banco.setStringList("filmes", filmesBanco);
+    setState(() {
+      mostrarFilmes = filmesBanco;
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +51,11 @@ class _TelaHomeState extends State<TelaHome> {
         children: [
           for(String filme in mostrarFilmes)
           Column(children: [
-            Image.network(filme.split("|")[3]),
-            Text(filme.split("|")[0])
+            GestureDetector(onTap: ()=>Navigator.push(context,MaterialPageRoute(builder:(context) => TelaDetalhes(filme: filme))),
+            child:Image.network(filme.split("|")[3], width: 100,),
+            ),
+            Text(filme.split("|")[0]),
+            BotaoNavegar(funcao: ()=> deletarFilmes(filme),textobotao: "Deletar",)
           ],)
         ],
       )

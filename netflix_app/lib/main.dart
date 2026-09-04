@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
         "/":(context) => TelaLogin(),
         "/home":(context) => TelaHome(),
         "/novofilme":(context)=> TelaNovoFilme(),
-        "/detalhes":(context)=> TelaDetalhes()
       },
     );
   }
