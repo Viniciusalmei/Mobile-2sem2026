@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mercadinho_app/navigation/navbar.dart';
 import 'package:mercadinho_app/screens/splascreen.dart';
+import 'package:mercadinho_app/screens/telagestao.dart';
 import 'package:mercadinho_app/screens/telahome.dart';
 import 'package:mercadinho_app/screens/telaperfil.dart';
 
@@ -17,7 +19,9 @@ class MyApp extends StatelessWidget {
       routes:{
         "/":(context) => SplashScreen(),
         "/home":(context)=> TelaHome(),
-        "/perfil":(context)=> TelaPerfil()
+        "/perfil":(context)=> TelaPerfil(),
+        "/navbar":(context)=> NavBar(),
+        "/gestao":(context) => TelaGestao(),
       }
     );
   }
