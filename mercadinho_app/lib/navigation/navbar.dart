@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mercadinho_app/screens/telacarrinho.dart';
 import 'package:mercadinho_app/screens/telahome.dart';
 import 'package:mercadinho_app/screens/telaperfil.dart';
 
@@ -21,6 +22,7 @@ class _NavBarState extends State<NavBar> {
 
   List<Widget> paginas = [
     TelaHome(),
+    TelaCarrinho(),
     TelaPerfil()
   ];
 
@@ -30,6 +32,7 @@ class _NavBarState extends State<NavBar> {
       body:paginas.elementAt(indexAtual),
       bottomNavigationBar: BottomNavigationBar(items: [
         BottomNavigationBarItem(icon: Icon(Icons.home),label:"Home"),
+        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: "Carrinho"),
         BottomNavigationBarItem(icon: Icon(Icons.person),label:"Perfil"),
       ],
       currentIndex: indexAtual,
