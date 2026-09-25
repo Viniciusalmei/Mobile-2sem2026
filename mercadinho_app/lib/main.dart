@@ -22,9 +22,17 @@ class MyApp extends StatelessWidget {
         "/home":(context)=> TelaHome(),
         "/perfil":(context)=> TelaPerfil(),
         "/navbar":(context)=> NavBar(),
-        "/gestao":(context) => TelaGestao(),
         "/login":(context)=> TelaLogin()
-      }
+      },
+      onGenerateRoute: (settings){
+        if(settings.name == "/gestao"){
+          if(statusAdmin != null && statusAdmin == true){
+            return MaterialPageRoute(builder:(context)=> TelaGestao());
+          }else{
+            return MaterialPageRoute(builder:(context)=> NavBar());
+          }
+        }
+      },
     );
   }
 }
