@@ -18,6 +18,7 @@ class _LoginState extends State<Login> {
       await FirebaseAuth.instance.signInWithEmailAndPassword(email: emailDigitado.text.trim(), password: senhaDigitada.text.trim());
       if(mounted){
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login realizado com sucesso")));
+        Navigator.pushNamed(context, "/tarefas");
       }
     } on FirebaseAuthException catch(e){
       String mensagemErro = "Erro ao realizar login";

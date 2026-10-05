@@ -4,6 +4,7 @@ import 'package:tarefas_app/firebase_options.dart';
 import 'package:tarefas_app/screens/cadastro.dart';
 import 'package:tarefas_app/screens/login.dart';
 import 'package:tarefas_app/screens/splash.dart';
+import 'package:tarefas_app/screens/tarefas.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized;
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         "/":(context)=> SplashScreen(),
         "/login":(context)=> Login(),
         "/cadastro":(context) => Cadastro(),
+        "/tarefas":(context) => Tarefas()
       }
     );
   }
