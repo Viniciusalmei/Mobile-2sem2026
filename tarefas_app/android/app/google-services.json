@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "234274869677",
+    "project_id": "app-tarefas-vini",
+    "storage_bucket": "app-tarefas-vini.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234274869677:android:d18588da9e5eb529975124",
+        "android_client_info": {
+          "package_name": "com.netflix.tarefas_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQXSthKgY2cjQ9fVm4DXcoZ53oocPr3zA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
